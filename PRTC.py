@@ -3,10 +3,6 @@ class PRTC:
     def __init__(self):
         print("init")
 
-        print(hex(1610678562))
-        print(hex(int(-536805289)))
-        print(int('0xFFFFFFFFE0010057',16))
-
         with open('suite_all.dat') as f1:
             case_list = []
             for case_section in f1.read().split('['):
