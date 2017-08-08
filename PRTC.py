@@ -3,6 +3,7 @@ class PRTC:
     def __init__(self):
         print("init")
 
+
         with open('suite_all.dat') as f1:
             case_list = []
             for case_section in f1.read().split('['):
@@ -55,8 +56,10 @@ class PRTC:
                     case_argument_except =''
                     for argu_line in argument_lines[1:]:
                         if '#' not in argu_line and argu_line != '':
-                            if 'Expected' in argu_line:
-                                case_argument_except += argu_line + '\n'
+                            if 'Return' in argu_line or 'State' in argu_line:
+                                # case_argument_except += argu_line + '\n'
+                                case_argument_except += PRTC.pr_error(argu_line) + '\n'
+
                             else:
                                 case_argument_input += argu_line + '\n'
                     argument_list.append([case_argument_id, case_argument_input.strip(), case_argument_except.strip()])
@@ -77,8 +80,17 @@ class PRTC:
         print()
 
 
-
-
+    def pr_error(args):
+        arg = str(args).split('=')[1]
+        if len(arg)>3:
+            with open('pr_error.txt', encoding = 'utf8') as f:
+                for errors in f.readlines():
+                    if '(0x' in errors and arg in errors:
+                        return args +' '+ errors.split()[1]
+                        break
+            return args
+        else:
+            return args
 
 if __name__ == '__main__':
     PRTC()
