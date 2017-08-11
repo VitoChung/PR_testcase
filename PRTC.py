@@ -35,12 +35,15 @@ class PRTC:
 
 
         with open('.\\testlogs\TPAFInfo_.log') as f:
-            test_result = []
+            # test_result = []
             for logs in f.readlines():
+                if 'MAIN,' in logs:
+                    argu = logs.split(',')[4].strip()
+
                 if '> in Module {MAIN}]' in logs:
                     log = logs.split('][')
                     for case_content in case_list:
-                        if log[1].lower() == case_content[1].lower() and log[4].split('<')[1].split('>')[0].lower() == case_content[3].lower():
+                        if log[1].lower() == case_content[1].lower() and log[4].split('<')[1].split('>')[0].lower() == case_content[3].lower() and argu+'\n' in case_content[4]:
                             for idx, item in enumerate(case_list):
                                 if case_content[0].lower() == item[0].lower():
                                     case_list[idx][6] = log[2]
