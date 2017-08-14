@@ -86,7 +86,7 @@ class PRTC:
     def pr_error(args):
         arg = str(args).split('=')[1]
         if len(arg)>3:
-            with open('pr_error.txt', encoding = 'utf8') as f:
+            with open('error.txt', encoding = 'utf8') as f:
                 for errors in f.readlines():
                     if '(0x' in errors and arg in errors:
                         return args +' '+ errors.split()[1]
