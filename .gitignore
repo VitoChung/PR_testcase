@@ -1,6 +1,1 @@
 .idea
-*.exe
-*.dll
-*.dat
-*.xls
-testlogs/*.*
