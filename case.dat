@@ -1,0 +1,14 @@
+[TEST_CASE_ARGUMENT]
+AC=TM
+ServerURL=
+EnableProxy=0
+ProxyServer=0
+ProxyPort=0
+ProxyType=0
+AccountID=
+Password=
+SessionTimeOut=10
+Flag=0
+Expire Type=EXPIRE_TYPE_
+Expected Return=0
+State=1

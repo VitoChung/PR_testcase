@@ -1,0 +1,14 @@
+/* Generic logical False */
+#define FALSE									(0)
+
+/* Generic logical True */
+#define TRUE									(1)
+
+/* Generic success */
+#define SUCCESS									(0)
+
+/* Generic error */
+#define ERROR									(0xE0010000) ‭-536805376‬
+
+/* Success */
+#define STATE_CHANGED							(0x60010000) 1610678272

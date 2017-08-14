@@ -1,0 +1,15 @@
+Time: 2017/08/14 09:42:41
+
+/////////////////////////////////////////////////////////////////////////////
+PROMPT--Test case interpreter begin to parse section [] in file: suite_all.dat
+
+[2017/08/14 09:42:41][TEST_CASE_ID]
+
+///////////////////////////[TEST_CASE_ID]///////////////////////////
+PROMPT--CmdExecutive report: Call function <TEST_FUNCTION_NAME> with arguments
+MAIN, TEST_CASE_ID, D:\bin, case.dat, TEST_CASE_ARGUMENT, 
+Time: 2017/08/14 09:42:41
+
+[2017/08/14 09:42:43][TEST_CASE_ID][PASS][0][Call <TEST_FUNCTION_NAME> in Module {MAIN}]
+
+[2017/08/14 09:42:43] SUMMARY [TOTAL: 1] [PASS: 1] [FAIL: 0] [NOT RUN: 0]

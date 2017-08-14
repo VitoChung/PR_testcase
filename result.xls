@@ -1,0 +1,16 @@
+Case	Argument	In use	Result	Input	Excepted
+TEST_CASE_NAME	"CASEID = TEST_CASE_ID
+ARGUMENTS = TEST_CASE_ARGUMENT
+DATAFILE = case.dat 
+FUNCTIONNAME = TEST_FUNCTION_NAME"	"O"	"PASS"	"AC=TM
+ServerURL=
+EnableProxy=0
+ProxyServer=0
+ProxyPort=0
+ProxyType=0
+AccountID=
+Password=
+SessionTimeOut=10
+Flag=0
+Expire Type=EXPIRE_TYPE_"	"Expected Return=0
+State=1"
