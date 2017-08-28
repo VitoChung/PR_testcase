@@ -1,1 +1,4 @@
 .idea
+*.xls
+*.txt
+testlog\
