@@ -1,4 +1,5 @@
 .idea
 *.xls
 *.txt
-testlog\
+*.dat
+testlog
