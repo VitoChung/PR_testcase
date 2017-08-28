@@ -52,20 +52,18 @@ class PRTC:
         with open('case.dat') as f:
             argument_list = []
             for argument_data in f.read().split('['):
-                if 'Expected' in argument_data:
-                    argument_lines = argument_data.split('\n')
-                    case_argument_id = argument_lines[0].strip('[ ]\t\r\n')
-                    case_argument_input = ''
-                    case_argument_except =''
-                    for argu_line in argument_lines[1:]:
-                        if '#' not in argu_line and argu_line != '':
-                            if 'Return' in argu_line or 'State' in argu_line:
-                                # case_argument_except += argu_line + '\n'
-                                case_argument_except += PRTC.pr_error(argu_line) + '\n'
-
-                            else:
-                                case_argument_input += argu_line + '\n'
-                    argument_list.append([case_argument_id, case_argument_input.strip(), case_argument_except.strip()])
+                argument_lines = argument_data.split('\n')
+                case_argument_id = argument_lines[0].strip('[ ]\t\r\n')
+                case_argument_input = ''
+                case_argument_except =''
+                for argu_line in argument_lines[1:]:
+                    if '#' not in argu_line and argu_line != '':
+                        if 'Expected' in argu_line:
+                            # case_argument_except += argu_line + '\n'
+                            case_argument_except += PRTC.pr_error(argu_line) + '\n'
+                        else:
+                            case_argument_input += argu_line + '\n'
+                argument_list.append([case_argument_id, case_argument_input.strip(), case_argument_except.strip()])
 
 
         with open('result.xls', 'w') as xls:
